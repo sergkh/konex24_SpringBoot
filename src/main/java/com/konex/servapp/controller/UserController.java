@@ -30,8 +30,8 @@ public class UserController {
 //    @Autowired
 //    private UserValidator userValidator;
 
-    @Autowired
-    private AccessDecisionManager accessDecisionManager;
+    //@Autowired
+    //private AccessDecisionManager accessDecisionManager;
 
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
     public String registration(Model model) {
@@ -89,7 +89,7 @@ public class UserController {
     @RequestMapping(value = {"/", "/welcome"}, method = RequestMethod.GET)
     public String welcome(Model model) {
         System.out.println("=============> WELCOME GET");
-        System.err.println(accessDecisionManager);
+        //System.err.println(accessDecisionManager);
         return "welcome";
     }
 
@@ -100,7 +100,7 @@ public class UserController {
 //        map.put("userList", userService.listUsers());
 
         System.out.println("=============> ADMIN GET");
-        System.err.println(accessDecisionManager);
+        //System.err.println(accessDecisionManager);
         return "admin";
     }
 
@@ -110,7 +110,7 @@ public class UserController {
 //        userService.delete(id);
 
         System.out.println("=============> DELETE GET");
-        System.err.println(accessDecisionManager);
+        //System.err.println(accessDecisionManager);
         return "redirect:/admin";
     }
 

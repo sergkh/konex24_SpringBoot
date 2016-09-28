@@ -28,12 +28,10 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserTypeDao userTypeDao;
 
-    @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Override
     public void save(User user) {
-        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+        user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
 
         Set<Role> roles = new HashSet<>();
         roles.add(roleDao.getOne(1L));

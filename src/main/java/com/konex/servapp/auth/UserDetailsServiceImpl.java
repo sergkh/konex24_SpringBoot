@@ -1,4 +1,4 @@
-package com.konex.servapp.service;
+package com.konex.servapp.auth;
 
 import com.konex.servapp.dao.UserDao;
 import com.konex.servapp.entity.Role;
